@@ -1,0 +1,162 @@
+.main2{
+    grid-area: main ;
+    
+    .fondoMain2{
+        background-image: url(media/fondo_index.jpg);
+        filter: grayscale(1);
+        
+        
+        width: 100%;
+        height: 700px;
+        
+        .tituloMain2{
+            display: inline-block;
+            
+            @extend %estiloTexto;
+            color: white;
+            
+        }
+    }
+
+
+    .parrafito{
+    
+        width: 100%;
+        height: 500px;
+        border: 1px solid black;
+    }
+
+
+
+    .actividadesMain{
+        color: white;
+        background-color: black;
+        display: flex;
+    
+    
+        margin: 100px;
+
+        .linkActividad{
+            border: none;
+            height: 150px;
+            width: 150px;
+            background-color: black;
+
+            img{
+                height: 50px;
+                width: 50px;
+            }
+
+        }
+
+        .titulosActividad{
+            margin: 40px 40px 0px 40px ;
+        
+        }
+
+        .textoActividad{
+            height: fit-content;
+            width: fit-content;
+            padding: 0px 40px 0px 40px ;
+            margin: 40px 40px 0px 40px ;
+            border-left: 1px solid black;
+        }
+
+    
+    
+    }
+
+
+    .footer2{
+        
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        color: white;
+
+        div{
+            background-color: transparent;
+            text-align: center;
+            padding: 30px;
+
+            h4{
+                font-size: 28px;
+                letter-spacing: 6px;
+            }
+
+            a{
+                color: white;
+                text-decoration: none;
+            }
+
+        }
+
+
+    }
+
+
+}
+
+
+@media  screen and (max-width: 375px) {
+
+    .main2 {
+    
+            .fondoMain2 {
+                background-image: url(media/fondo_index.jpg);
+                background-size: cover;
+                filter: grayscale(1);
+                width: 375px;
+                height: 400px;
+    
+                .tituloMain2 {
+                    display: inline-block;
+                    font-size: 4rem;
+                    color: white;
+                    margin-top: 25%;
+                    margin-left: 10px;
+                }
+    
+            }
+
+
+            .actividadesMain{
+                margin: 1rem;
+
+                .linkActividad{
+                    height: 150px;
+                    width: 150px;
+
+                    img{
+                        height: 3rem;
+                        width: 3rem;
+                    }
+                }
+
+                .titulosActividad{
+                    margin: 40px 40px 0px 40px ;
+                
+                }
+                
+                .textoActividad{
+                    display:none;
+                }
+            
+            }
+
+            .footer2{
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: black;
+                div{
+                    background-color: black; 
+                }
+            }
+        }
+    
+ 
+
+
+}
+
+

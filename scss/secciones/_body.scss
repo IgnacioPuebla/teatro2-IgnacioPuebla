@@ -1,0 +1,47 @@
+.body_mio{
+
+    display: grid;
+    grid-template-areas: 
+        'header nav nav'
+        'main main main'
+        ;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+
+}
+
+@media  screen and (max-width: 375px) {
+
+
+
+    /*primero el grid general*/
+    .body_mio{
+    
+        display: grid;
+        grid-template-areas: 
+            'header'
+            'main'
+            ;
+    
+        grid-template-columns: 375px;
+        grid-template-rows: auto auto;
+    
+    
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+@mixin obritas($colorFondo, $lugarGrid){
+    background-color: $colorFondo;
+    grid-area: $lugarGrid;
+}

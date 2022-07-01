@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*la idea es dejar el main lo mas simple posible, corte todo import en lo posible*/
+
+/*recordatorio: las variables y extend son lo primero*/
+@import 'scss/variables/extends';
+@import 'scss/variables/mixins';
+
+
+
+@import 'scss/secciones/body';
+@import 'scss/secciones/headerNav';
+@import 'scss/secciones/mainIndex';
+@import 'scss/secciones/mainPlays';
+@import 'scss/secciones/mainDigital';
+@import 'scss/secciones/mainUs';
+@import 'scss/secciones/mainContacto';
+
+
+

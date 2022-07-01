@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*la idea es dejar el main lo mas simple posible, corte todo import en lo posible*/
+/*recordatorio: las variables y extend son lo primero*/
+.main2 .fondoMain2 .tituloMain2, .main2 .tituloPlays {
+  font-size: 5rem;
+  margin-top: 2rem;
+  margin-left: 8rem; }
+
+.body_mio {
+  display: grid;
+  grid-template-areas: 'header nav nav' 'main main main';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto; }
+
+@media screen and (max-width: 375px) {
+  /*primero el grid general*/
+  .body_mio {
+    display: grid;
+    grid-template-areas: 'header' 'main';
+    grid-template-columns: 375px;
+    grid-template-rows: auto auto; } }
+
+.header2 {
+  grid-area: header;
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+  padding-left: 20px;
+  padding-top: 20px;
+  border-bottom: solid 1px white;
+  z-index: 4; }
+  .header2 a .imagenHeader {
+    width: 50px;
+    height: 50px;
+    transition: width height 1s; }
+    .header2 a .imagenHeader:hover {
+      width: 55px;
+      height: 55px; }
+  .header2 h1 {
+    padding: 5px; }
+  .header2 .navOculto .botonNav {
+    display: none; }
+  .header2 .navOculto .navContenido {
+    display: none; }
+
+.nav2 {
+  grid-area: nav;
+  position: sticky;
+  top: 0;
+  display: inline;
+  float: inline-end;
+  font-family: 'Raleway', sans-serif;
+  /*width: 800px;*/
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: solid 1px white;
+  z-index: 4; }
+  .nav2 a {
+    background-color: transparent;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 1s padding ease-out, 1s margin ease-out, 1s border ease-out; }
+    .nav2 a:hover {
+      padding: 10px;
+      margin: -10px 5px;
+      border: 2px solid #ddd; }
+
+@media screen and (max-width: 375px) {
+  .header2 {
+    justify-content: space-between; }
+    .header2 a .imagenHeader {
+      width: 40px;
+      height: 40px; }
+    .header2 h1 {
+      display: none; }
+    .header2 .navOculto {
+      position: relative;
+      display: inline-block; }
+      .header2 .navOculto .botonNav {
+        display: inline;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-right: 20px; }
+        .header2 .navOculto .botonNav img {
+          width: 40px;
+          height: 30px; }
+      .header2 .navOculto .navContenido {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; }
+        .header2 .navOculto .navContenido a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block; }
+          .header2 .navOculto .navContenido a::hover {
+            background-color: #f1f1f1; }
+      .header2 .navOculto:hover .navContenido {
+        display: block;
+        right: 40px; }
+  .nav2 {
+    display: none; } }
+
+.main2 {
+  grid-area: main; }
+  .main2 .fondoMain2 {
+    background-image: url(media/fondo_index.jpg);
+    filter: grayscale(1);
+    width: 100%;
+    height: 700px; }
+    .main2 .fondoMain2 .tituloMain2 {
+      display: inline-block;
+      color: white; }
+  .main2 .parrafito {
+    width: 100%;
+    height: 500px;
+    border: 1px solid black; }
+  .main2 .actividadesMain {
+    color: white;
+    background-color: black;
+    display: flex;
+    margin: 100px; }
+    .main2 .actividadesMain .linkActividad {
+      border: none;
+      height: 150px;
+      width: 150px;
+      background-color: black; }
+      .main2 .actividadesMain .linkActividad img {
+        height: 50px;
+        width: 50px; }
+    .main2 .actividadesMain .titulosActividad {
+      margin: 40px 40px 0px 40px; }
+    .main2 .actividadesMain .textoActividad {
+      height: fit-content;
+      width: fit-content;
+      padding: 0px 40px 0px 40px;
+      margin: 40px 40px 0px 40px;
+      border-left: 1px solid black; }
+  .main2 .footer2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white; }
+    .main2 .footer2 div {
+      background-color: transparent;
+      text-align: center;
+      padding: 30px; }
+      .main2 .footer2 div h4 {
+        font-size: 28px;
+        letter-spacing: 6px; }
+      .main2 .footer2 div a {
+        color: white;
+        text-decoration: none; }
+
+@media screen and (max-width: 375px) {
+  .main2 .fondoMain2 {
+    background-image: url(media/fondo_index.jpg);
+    background-size: cover;
+    filter: grayscale(1);
+    width: 375px;
+    height: 400px; }
+    .main2 .fondoMain2 .tituloMain2 {
+      display: inline-block;
+      font-size: 4rem;
+      color: white;
+      margin-top: 25%;
+      margin-left: 10px; }
+  .main2 .actividadesMain {
+    margin: 1rem; }
+    .main2 .actividadesMain .linkActividad {
+      height: 150px;
+      width: 150px; }
+      .main2 .actividadesMain .linkActividad img {
+        height: 3rem;
+        width: 3rem; }
+    .main2 .actividadesMain .titulosActividad {
+      margin: 40px 40px 0px 40px; }
+    .main2 .actividadesMain .textoActividad {
+      display: none; }
+  .main2 .footer2 {
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black; }
+    .main2 .footer2 div {
+      background-color: black; } }
+
+.main2 .grid_plays {
+  display: grid;
+  grid-template-areas: "obra1 obra1 obra2 obra3" "obra4 obra5 obra6 obra7";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200 px;
+  margin: 8rem; }
+  .main2 .grid_plays .obra1 {
+    background-color: red;
+    grid-area: obra1; }
+  .main2 .grid_plays .obra2 {
+    background-color: beige;
+    grid-area: obra2; }
+  .main2 .grid_plays .obra3 {
+    background-color: aqua;
+    grid-area: obra3; }
+  .main2 .grid_plays .obra4 {
+    background-color: orchid;
+    grid-area: obra4; }
+  .main2 .grid_plays .obra5 {
+    background-color: blue;
+    grid-area: obra5; }
+  .main2 .grid_plays .obra6 {
+    background-color: chocolate;
+    grid-area: obra6; }
+  .main2 .grid_plays .obra7 {
+    background-color: olive;
+    grid-area: obra7; }
+  .main2 .grid_plays div .imagenGridPlays {
+    width: 100%;
+    height: 15rem; }
+  .main2 .grid_plays div .textoObras {
+    height: 10rem; }
+    .main2 .grid_plays div .textoObras h3 {
+      font-size: 2rem;
+      display: inline-block;
+      padding-top: 2rem;
+      padding-left: 2rem; }
+      .main2 .grid_plays div .textoObras h3 a {
+        text-decoration: none;
+        color: black; }
+        .main2 .grid_plays div .textoObras h3 a:hover {
+          text-decoration: underline; }
+  .main2 .grid_plays div .containerObra {
+    position: relative;
+    background-color: inherit; }
+    .main2 .grid_plays div .containerObra .botonObra {
+      width: 100%;
+      border: none;
+      background-color: inherit;
+      filter: brightness(0.8); }
+    .main2 .grid_plays div .containerObra .contenidoObra {
+      display: none;
+      position: absolute; }
+    .main2 .grid_plays div .containerObra:hover .contenidoObra {
+      display: block;
+      background-color: inherit;
+      filter: brightness(0.8);
+      height: auto;
+      padding: 2rem; }
+      .main2 .grid_plays div .containerObra:hover .contenidoObra .botonSecundario {
+        border: none;
+        display: block;
+        margin-top: 1.5rem; }
+        .main2 .grid_plays div .containerObra:hover .contenidoObra .botonSecundario a {
+          background-color: white;
+          padding: 1rem; }
+
+@media screen and (max-width: 375px) {
+  .main2 .tituloPlays {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem; }
+  .main2 .grid_plays {
+    display: grid;
+    grid-template-areas: "obra1" "obra2" "obra3" "obra4" "obra5" "obra6" "obra7";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 1rem; }
+    .main2 .grid_plays div .imagenGridPlays {
+      width: 100%;
+      height: 15rem; }
+    .main2 .grid_plays div .textoObras {
+      height: 8rem; }
+      .main2 .grid_plays div .textoObras h3 {
+        font-size: 2rem;
+        padding-top: 2rem;
+        padding-left: 2rem; }
+    .main2 .grid_plays div .containerObra .contenidoObra .botonSecundario {
+      margin-top: 1.5rem; }
+      .main2 .grid_plays div .containerObra .contenidoObra .botonSecundario a {
+        padding: 1rem; }
+    .main2 .grid_plays div .containerObra:hover .contenidoObra {
+      height: auto;
+      padding: 2rem; }
+  /*.obra1{
+        margin-bottom:22rem;
+    }*/ }
+
+.main2 .fotoUs {
+  margin-left: 300px;
+  margin-top: 150px; }
+
+.main2 .textoUs {
+  column-count: 2;
+  margin: 90px; }

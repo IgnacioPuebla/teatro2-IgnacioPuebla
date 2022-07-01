@@ -1,0 +1,228 @@
+.main2 {
+
+    .tituloPlays {
+        @extend %estiloTexto;
+
+    }
+
+    .grid_plays {
+        display: grid;
+        grid-template-areas:
+            "obra1 obra1 obra2 obra3"
+            "obra4 obra5 obra6 obra7"
+        ;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 200 px;
+
+        margin: 8rem;
+
+        .obra1 {
+            @include obritas(red, obra1);
+        }
+
+        .obra2 {
+            @include obritas(beige, obra2);
+            
+        }
+
+        .obra3 {
+            @include obritas(aqua, obra3);
+            
+        }
+
+        .obra4 {
+            @include obritas(orchid, obra4);
+            
+        }
+
+        .obra5 {
+            @include obritas(blue, obra5);
+            
+        }
+
+        .obra6 {
+            @include obritas(chocolate, obra6);
+            
+        }
+
+        .obra7 {
+            @include obritas(olive, obra7);
+            
+        }
+
+        div {
+            .imagenGridPlays {
+                width: 100%;
+                height: 15rem;
+            }
+
+            .textoObras {
+                height: 10rem;
+
+                h3 {
+                    font-size: 2rem;
+                    display: inline-block;
+                    padding-top: 2rem;
+                    padding-left: 2rem;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .containerObra {
+                position: relative;
+                background-color: inherit;
+
+                .botonObra {
+                    width: 100%;
+                    border: none;
+                    background-color: inherit;
+                    filter: brightness(0.8);
+                }
+
+                .contenidoObra {
+                    display: none;
+                    position: absolute;
+                }
+
+                &:hover {
+                    .contenidoObra {
+                        display: block;
+                        background-color: inherit;
+                        filter: brightness(0.8);
+                        height: auto;
+
+                        padding: 2rem;
+
+                        .botonSecundario {
+                            border: none;
+                            display: block;
+                            margin-top: 1.5rem;
+
+                            a {
+                                background-color: white;
+                                padding: 1rem;
+
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+
+    .main2 {
+
+        .tituloPlays {
+            font-size: 2rem;
+            margin-top: 0.5rem;
+            margin-left: 2rem;
+
+        }
+
+        .grid_plays {
+            display: grid;
+            grid-template-areas:
+                "obra1"
+                "obra2"
+                "obra3"
+                "obra4"
+                "obra5"
+                "obra6"
+                "obra7"
+
+            ;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+
+            margin: 1rem;
+
+            div {
+                .imagenGridPlays {
+                    width: 100%;
+                    height: 15rem;
+                }
+
+                .textoObras {
+                    height: 8rem;
+
+                    h3 {
+                        font-size: 2rem;
+                        padding-top: 2rem;
+                        padding-left: 2rem;
+                    }
+                }
+
+                .containerObra {
+
+                    .contenidoObra {
+                        .botonSecundario {
+                            margin-top: 1.5rem;
+
+                            a {
+                                padding: 1rem;
+                            }
+                        }
+                    }
+
+                    &:hover {
+
+                        .contenidoObra {
+                            height: auto;
+                            padding: 2rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    
+    
+    
+
+    
+    
+    
+    /*.obra1{
+        margin-bottom:22rem;
+    }*/
+    
+    
+    
+    
+ 
+    
+
+}
+
+
