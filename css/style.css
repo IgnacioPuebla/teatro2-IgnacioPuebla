@@ -5,7 +5,7 @@
 
 /*la idea es dejar el main lo mas simple posible, corte todo import en lo posible*/
 /*recordatorio: las variables y extend son lo primero*/
-.main2 .fondoMain2 .tituloMain2, .main2 .tituloPlays {
+.main2 .fondoMain2 .tituloMain2, .main2 .tituloPlays, .main2 .tituloDigital {
   font-size: 5rem;
   margin-top: 2rem;
   margin-left: 8rem; }
@@ -303,6 +303,48 @@
   /*.obra1{
         margin-bottom:22rem;
     }*/ }
+
+.main2 .tarjetaNoticia {
+  /*de prueba, despues lo saco*/
+  border: 1px solid green;
+  /*=========================*/
+  display: flex;
+  padding: 5rem; }
+  .main2 .tarjetaNoticia__imagen {
+    width: 50%;
+    height: 14rem; }
+  .main2 .tarjetaNoticia div {
+    border: 1px solid green; }
+    .main2 .tarjetaNoticia div .tarjetaNoticia__titulo {
+      border: 1px solid green;
+      padding: 1rem; }
+    .main2 .tarjetaNoticia div .tarjetaNoticia__texto {
+      border: 1px solid green;
+      padding: 1rem; }
+    .main2 .tarjetaNoticia div .botonTarjeta {
+      border: none;
+      padding: 1rem;
+      color: white;
+      background-color: black;
+      margin-left: 3rem;
+      margin-top: 1rem; }
+      .main2 .tarjetaNoticia div .botonTarjeta:hover {
+        background-color: #4d4d4d; }
+
+.main2 .containerTarjetitas {
+  display: flex;
+  padding: 5rem;
+  justify-content: space-around; }
+  .main2 .containerTarjetitas .tarjetita {
+    border: 1px solid green; }
+    .main2 .containerTarjetitas .tarjetita .tarjetita__imagen {
+      width: 6rem;
+      height: 50%; }
+    .main2 .containerTarjetitas .tarjetita div .tarjetitaTitulo a {
+      text-decoration: none;
+      color: black; }
+    .main2 .containerTarjetitas .tarjetita div .tarjetita__texto {
+      padding: 1rem; }
 
 .main2 .fotoUs {
   margin-left: 300px;

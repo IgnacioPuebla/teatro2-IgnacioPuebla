@@ -1,0 +1,137 @@
+.main2{
+
+
+
+    .tituloDigital {
+        @extend %estiloTexto;
+
+    }
+
+    .tarjetaNoticia{
+
+        /*de prueba, despues lo saco*/
+        border: 1px solid green;
+        /*=========================*/
+
+        display: flex;
+        padding: 5rem;
+
+
+        &__imagen{
+            width: 50%;
+            height: 14rem;
+        }
+
+        div{
+            
+            border: 1px solid green;
+
+            .tarjetaNoticia__titulo{
+                border: 1px solid green;
+                padding: 1rem;
+
+
+            }
+
+
+            .tarjetaNoticia__texto{
+                border: 1px solid green;
+                padding: 1rem;
+            }
+
+            .botonTarjeta{
+               
+               @include btnCard(white, black);
+
+               margin-left: 3rem;
+               margin-top: 1rem;
+
+
+            }
+
+
+        }
+    }
+
+
+    .containerTarjetitas{
+
+        display: flex;
+        padding: 5rem;
+        justify-content: space-around;
+
+
+
+        .tarjetita{
+
+            border: 1px solid green;
+            
+
+            .tarjetita__imagen{
+                width: 6rem;
+                height: 50%;
+            }
+
+            div{
+                .tarjetitaTitulo{
+
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+
+                .tarjetita__texto{
+                    padding: 1rem;
+
+                }
+            }
+            
+
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
