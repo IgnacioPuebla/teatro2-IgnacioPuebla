@@ -4,6 +4,7 @@
 
     .tituloDigital {
         @extend %estiloTexto;
+        margin-bottom: 2rem;
 
     }
 
@@ -14,20 +15,26 @@
         /*=========================*/
 
         display: flex;
-        padding: 5rem;
+        justify-content: center;
+        padding: auto;
 
 
-        &__imagen{
-            width: 50%;
-            height: 14rem;
+        .tarjetaNoticia__imagen{
+            width: 35rem;
+            height: 20rem;
+
         }
 
-        div{
+        .containerNoticiaCentral{
             
             border: 1px solid green;
+            width: 35rem;
+            height: 20rem;
+            padding-left: 3rem;
 
             .tarjetaNoticia__titulo{
                 border: 1px solid green;
+                font-size: 3rem;
                 padding: 1rem;
 
 
@@ -43,7 +50,6 @@
                
                @include btnCard(white, black);
 
-               margin-left: 3rem;
                margin-top: 1rem;
 
 
@@ -57,23 +63,35 @@
     .containerTarjetitas{
 
         display: flex;
-        padding: 5rem;
-        justify-content: space-around;
+        
+        justify-content: center;
 
-
+        margin: 4rem auto;
 
         .tarjetita{
 
             border: 1px solid green;
+            margin: auto 1rem;
+            width: 22rem;
+            height: 25rem;
             
 
             .tarjetita__imagen{
-                width: 6rem;
-                height: 50%;
+                display: block;
+                width: 100%;
+                height: 10rem;
+
+                
             }
 
-            div{
+            .tarjetita__textosContainer{
+
+                
                 .tarjetitaTitulo{
+                    margin-top: 1rem;
+                    padding: 1rem;
+
+                    font-size: 1.5rem;
 
                     a{
                         text-decoration: none;
@@ -82,6 +100,7 @@
                 }
 
                 .tarjetita__texto{
+                    margin-top: 1rem;
                     padding: 1rem;
 
                 }
@@ -92,35 +111,7 @@
 
 
 
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -128,10 +119,105 @@
 
 
 
+@media screen and (max-width: 400px){
+
+
+    .main2{
+
+        .tituloDigital {
+            @extend %estiloTexto--mobile;
+            
+    
+        }
+
+        .tarjetaNoticia{
+            flex-direction: column;
+            width: 22rem;
+            margin: auto;
+
+
+            .tarjetaNoticia__imagen{
+
+                width: 100%;
+                height: 16rem;
+            }
+
+            .containerNoticiaCentral{
+            
+                border: 1px solid green;
+                width: 22rem;
+                height: 22rem;
+                padding-left: 0;
+    
+                .tarjetaNoticia__titulo{
+                    border: 1px solid green;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+    
+    
+                }
+    
+    
+                .tarjetaNoticia__texto{
+                    border: 1px solid green;
+                    padding: 1rem;
+                }
+    
+                .botonTarjeta{
+                   
+                   @include btnCard(white, black);
+    
+                   margin-top: 1rem;
+    
+    
+                }
+    
+    
+            }
+
+
+
+        }
+
+
+        .containerTarjetitas{
+
+            display: flex;
+            flex-direction: column;
+            
+    
+            
+    
+            .tarjetita{
+    
+                border: 1px solid green;
+                margin: auto;
+                width: 22rem;
+                height: 25rem;
+                
+    
+                .tarjetita__imagen{
+                    
+                    height: 10rem;
+    
+                    
+                }
+    
+
+            }
+    
+    
+    
+        }
 
 
 
 
+
+    }
+
+
+}
 
 
 

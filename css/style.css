@@ -5,10 +5,16 @@
 
 /*la idea es dejar el main lo mas simple posible, corte todo import en lo posible*/
 /*recordatorio: las variables y extend son lo primero*/
-.main2 .fondoMain2 .tituloMain2, .main2 .tituloPlays, .main2 .tituloDigital {
+.main2 .fondoMain2 .tituloMain2, .main2 .tituloPlays, .main2 .tituloDigital, .main2 .tituloUs, .main2 .tituloContacto {
   font-size: 5rem;
   margin-top: 2rem;
   margin-left: 8rem; }
+
+@media screen and (max-width: 400px) {
+  .main2 .tituloPlays, .main2 .tituloDigital, .main2 .tituloUs, .main2 .tituloContacto {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem; } }
 
 .body_mio {
   display: grid;
@@ -83,7 +89,7 @@
       margin: -10px 5px;
       border: 2px solid #ddd; }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .header2 {
     justify-content: space-between; }
     .header2 a .imagenHeader {
@@ -174,12 +180,12 @@
         color: white;
         text-decoration: none; }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .main2 .fondoMain2 {
     background-image: url(media/fondo_index.jpg);
     background-size: cover;
     filter: grayscale(1);
-    width: 375px;
+    width: 400px;
     height: 400px; }
     .main2 .fondoMain2 .tituloMain2 {
       display: inline-block;
@@ -273,11 +279,7 @@
           background-color: white;
           padding: 1rem; }
 
-@media screen and (max-width: 375px) {
-  .main2 .tituloPlays {
-    font-size: 2rem;
-    margin-top: 0.5rem;
-    margin-left: 2rem; }
+@media screen and (max-width: 400px) {
   .main2 .grid_plays {
     display: grid;
     grid-template-areas: "obra1" "obra2" "obra3" "obra4" "obra5" "obra6" "obra7";
@@ -304,52 +306,209 @@
         margin-bottom:22rem;
     }*/ }
 
+.main2 .tituloDigital {
+  margin-bottom: 2rem; }
+
 .main2 .tarjetaNoticia {
   /*de prueba, despues lo saco*/
   border: 1px solid green;
   /*=========================*/
   display: flex;
-  padding: 5rem; }
-  .main2 .tarjetaNoticia__imagen {
-    width: 50%;
-    height: 14rem; }
-  .main2 .tarjetaNoticia div {
-    border: 1px solid green; }
-    .main2 .tarjetaNoticia div .tarjetaNoticia__titulo {
+  justify-content: center;
+  padding: auto; }
+  .main2 .tarjetaNoticia .tarjetaNoticia__imagen {
+    width: 35rem;
+    height: 20rem; }
+  .main2 .tarjetaNoticia .containerNoticiaCentral {
+    border: 1px solid green;
+    width: 35rem;
+    height: 20rem;
+    padding-left: 3rem; }
+    .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__titulo {
+      border: 1px solid green;
+      font-size: 3rem;
+      padding: 1rem; }
+    .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__texto {
       border: 1px solid green;
       padding: 1rem; }
-    .main2 .tarjetaNoticia div .tarjetaNoticia__texto {
-      border: 1px solid green;
-      padding: 1rem; }
-    .main2 .tarjetaNoticia div .botonTarjeta {
+    .main2 .tarjetaNoticia .containerNoticiaCentral .botonTarjeta {
       border: none;
       padding: 1rem;
       color: white;
       background-color: black;
-      margin-left: 3rem;
       margin-top: 1rem; }
-      .main2 .tarjetaNoticia div .botonTarjeta:hover {
+      .main2 .tarjetaNoticia .containerNoticiaCentral .botonTarjeta:hover {
         background-color: #4d4d4d; }
 
 .main2 .containerTarjetitas {
   display: flex;
-  padding: 5rem;
-  justify-content: space-around; }
+  justify-content: center;
+  margin: 4rem auto; }
   .main2 .containerTarjetitas .tarjetita {
-    border: 1px solid green; }
+    border: 1px solid green;
+    margin: auto 1rem;
+    width: 22rem;
+    height: 25rem; }
     .main2 .containerTarjetitas .tarjetita .tarjetita__imagen {
-      width: 6rem;
-      height: 50%; }
-    .main2 .containerTarjetitas .tarjetita div .tarjetitaTitulo a {
-      text-decoration: none;
-      color: black; }
-    .main2 .containerTarjetitas .tarjetita div .tarjetita__texto {
+      display: block;
+      width: 100%;
+      height: 10rem; }
+    .main2 .containerTarjetitas .tarjetita .tarjetita__textosContainer .tarjetitaTitulo {
+      margin-top: 1rem;
+      padding: 1rem;
+      font-size: 1.5rem; }
+      .main2 .containerTarjetitas .tarjetita .tarjetita__textosContainer .tarjetitaTitulo a {
+        text-decoration: none;
+        color: black; }
+    .main2 .containerTarjetitas .tarjetita .tarjetita__textosContainer .tarjetita__texto {
+      margin-top: 1rem;
       padding: 1rem; }
 
+@media screen and (max-width: 400px) {
+  .main2 .tarjetaNoticia {
+    flex-direction: column;
+    width: 22rem;
+    margin: auto; }
+    .main2 .tarjetaNoticia .tarjetaNoticia__imagen {
+      width: 100%;
+      height: 16rem; }
+    .main2 .tarjetaNoticia .containerNoticiaCentral {
+      border: 1px solid green;
+      width: 22rem;
+      height: 22rem;
+      padding-left: 0; }
+      .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__titulo {
+        border: 1px solid green;
+        font-size: 1.5rem;
+        padding: 1rem; }
+      .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__texto {
+        border: 1px solid green;
+        padding: 1rem; }
+      .main2 .tarjetaNoticia .containerNoticiaCentral .botonTarjeta {
+        border: none;
+        padding: 1rem;
+        color: white;
+        background-color: black;
+        margin-top: 1rem; }
+        .main2 .tarjetaNoticia .containerNoticiaCentral .botonTarjeta:hover {
+          background-color: #4d4d4d; }
+  .main2 .containerTarjetitas {
+    display: flex;
+    flex-direction: column; }
+    .main2 .containerTarjetitas .tarjetita {
+      border: 1px solid green;
+      margin: auto;
+      width: 22rem;
+      height: 25rem; }
+      .main2 .containerTarjetitas .tarjetita .tarjetita__imagen {
+        height: 10rem; } }
+
 .main2 .fotoUs {
-  margin-left: 300px;
-  margin-top: 150px; }
+  display: block;
+  margin: 3rem auto auto auto; }
 
 .main2 .textoUs {
   column-count: 2;
-  margin: 90px; }
+  margin: 8rem; }
+
+@media screen and (max-width: 400px) {
+  .main2 .fotoUs {
+    display: block;
+    width: 18rem;
+    height: 14rem;
+    margin: 2rem auto auto auto; }
+  .main2 .textoUs {
+    column-count: 1;
+    width: 18rem;
+    margin: 2rem auto; } }
+
+.main2 .subtituloContacto {
+  font-size: 2rem;
+  margin-left: 8rem; }
+
+.main2 .formContacto {
+  border: 1px solid green; }
+  .main2 .formContacto .campos {
+    border: 1px solid red;
+    margin: 2rem auto auto auto;
+    display: grid;
+    width: 50rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto; }
+    .main2 .formContacto .campos .campGral {
+      min-height: 3rem;
+      padding-left: 1.5rem; }
+    .main2 .formContacto .campos .camp1 {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    .main2 .formContacto .campos .camp2 {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+    .main2 .formContacto .campos .camp3 {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    .main2 .formContacto .campos .camp4 {
+      grid-column: 2/3;
+      grid-row: 2/3; }
+    .main2 .formContacto .campos .camp5 {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      padding-left: 1.5rem;
+      padding-top: 1rem;
+      resize: none; }
+  .main2 .formContacto .botonCampos {
+    display: block;
+    margin: 2rem auto;
+    height: 2.5rem;
+    width: 10rem; }
+
+.main2 .actividadesContacto {
+  color: black;
+  background-color: transparent;
+  width: 50rem;
+  border-bottom: 1px solid darkgray;
+  border-top: 1px solid darkgray;
+  display: flex;
+  margin: auto; }
+  .main2 .actividadesContacto .linkActividad {
+    border: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: transparent; }
+    .main2 .actividadesContacto .linkActividad img {
+      height: 50px;
+      width: 50px; }
+  .main2 .actividadesContacto .titulosActividad {
+    margin: 1rem 0rem 1rem 2rem; }
+
+@media screen and (max-width: 400px) {
+  .main2 .subtituloContacto {
+    font-size: 1rem;
+    margin-left: 2rem; }
+  .main2 .formContacto .campos {
+    width: 20rem;
+    grid-template-columns: auto; }
+    .main2 .formContacto .campos .camp1 {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    .main2 .formContacto .campos .camp2 {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    .main2 .formContacto .campos .camp3 {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    .main2 .formContacto .campos .camp4 {
+      grid-column: 1/2;
+      grid-row: 4/5; }
+    .main2 .formContacto .campos .camp5 {
+      grid-column: 1/2;
+      grid-row: 5/6;
+      padding-left: 1.5rem;
+      padding-top: 1rem;
+      resize: none; }
+    .main2 .formContacto .campos .botonCampos {
+      height: 2.5rem;
+      width: 10rem;
+      margin: 2rem auto; }
+  .main2 .actividadesContacto {
+    width: 20rem; } }

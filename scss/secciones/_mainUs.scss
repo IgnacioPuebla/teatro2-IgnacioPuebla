@@ -1,12 +1,46 @@
 .main2{
+
+    .tituloUs{
+        @extend %estiloTexto;
+    }
     .fotoUs{
-        margin-left: 300px;
-        margin-top:150px;
+        display: block;
+        margin: 3rem auto auto auto;
     }
     
     
     .textoUs{
         column-count: 2;
-        margin: 90px;
+        margin: 8rem;
     }
+    
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+
+    .main2 {
+
+        .tituloUs{
+            @extend %estiloTexto--mobile;
+        }
+
+        .fotoUs{
+            display: block;
+            width: 18rem;
+            height: 14rem;
+            margin: 2rem auto auto auto;
+
+        }
+
+        .textoUs{
+            column-count: 1;
+            width: 18rem;
+            margin: 2rem auto;
+        }
+    }
+
+
 }
