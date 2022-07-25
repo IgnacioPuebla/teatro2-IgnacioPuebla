@@ -2,12 +2,15 @@
     grid-area: main ;
     
     .fondoMain2{
-        background-image: url(media/fondo_index.jpg);
+        background-image: url(https://res.cloudinary.com/nubenak2/image/upload/v1658701103/teatro/fondo_index_cph2xk.jpg);
+        background-size: cover;
         filter: grayscale(1);
         
-        
         width: 100%;
-        height: 700px;
+        height: 25rem;
+        
+
+       
         
         .tituloMain2{
             display: inline-block;
@@ -19,12 +22,7 @@
     }
 
 
-    .parrafito{
     
-        width: 100%;
-        height: 500px;
-        border: 1px solid black;
-    }
 
 
 
@@ -34,31 +32,32 @@
         display: flex;
     
     
-        margin: 100px;
+        margin: 6rem;
 
         .linkActividad{
             border: none;
-            height: 150px;
-            width: 150px;
+            height: 14rem;
+            width: 14rem;
             background-color: black;
 
             img{
-                height: 50px;
-                width: 50px;
+                height: 4rem;
+                width: 4rem;
             }
 
         }
 
         .titulosActividad{
-            margin: 40px 40px 0px 40px ;
+            font-size: 3rem;
+            margin: 5rem 3rem 0rem 3rem ;
         
         }
 
         .textoActividad{
             height: fit-content;
             width: fit-content;
-            padding: 0px 40px 0px 40px ;
-            margin: 40px 40px 0px 40px ;
+            padding: 0rem 3rem 0rem 3rem ;
+            margin: 5rem 3rem 0rem 3rem ;
             border-left: 1px solid black;
         }
 
@@ -76,11 +75,13 @@
 
         div{
             background-color: transparent;
+            display: flex;
+            flex-direction: column;
             text-align: center;
-            padding: 30px;
+            padding: 2rem;
 
             h4{
-                font-size: 28px;
+                font-size: 2.8rem;
                 letter-spacing: 6px;
             }
 
@@ -103,11 +104,9 @@
     .main2 {
     
             .fondoMain2 {
-                background-image: url(media/fondo_index.jpg);
-                background-size: cover;
-                filter: grayscale(1);
-                width: 400px;
-                height: 400px;
+                
+                
+                
     
                 .tituloMain2 {
                     display: inline-block;
@@ -124,22 +123,24 @@
                 margin: 1rem;
 
                 .linkActividad{
-                    height: 150px;
-                    width: 150px;
+                    height: 4rem;
+                    width: 4rem;
 
                     img{
-                        height: 3rem;
-                        width: 3rem;
+                        height: 1.5rem;
+                        width: 1.5rem;
                     }
                 }
 
                 .titulosActividad{
-                    margin: 40px 40px 0px 40px ;
+                    font-size: 2.5rem;
+                    margin: 0.5rem 0rem 0rem 1rem ;
                 
                 }
                 
                 .textoActividad{
                     display:none;
+                    position: absolute
                 }
             
             }

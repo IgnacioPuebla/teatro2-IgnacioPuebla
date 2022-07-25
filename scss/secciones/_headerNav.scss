@@ -1,6 +1,7 @@
 .header2 {
     grid-area: header;
     display: flex;
+    justify-content: space-between;
     position: sticky;
     top: 0;
 
@@ -15,126 +16,157 @@
     border-bottom: solid 1px white;
     z-index: 4;
 
-    a {
-        .imagenHeader {
-            width: 50px;
-            height: 50px;
+    div{
+        display: flex;
 
-            transition: width height 1s;
+        a {
+            .imagenHeader {
+                width: 50px;
+                height: 50px;
 
-            &:hover {
-                width: 55px;
-                height: 55px;
+                transition: width height 1s;
+
+                &:hover {
+                    width: 55px;
+                    height: 55px;
+                }
+
             }
-
-        }
-    }
-
-    h1 {
-        padding: 5px;
-    }
-
-    .navOculto {
-        .botonNav {
-            display: none;
         }
 
-        .navContenido {
-            display: none
+        h1 {
+            padding: 5px;
+            
         }
     }
+    
+    .botonNav {
+        display: none;
+        
+    }
 
-}
-
-
-
-
-
-.nav2 {
-    grid-area: nav;
-    position: sticky;
-    top: 0;
-
-    display: inline;
-    float: inline-end;
-    font-family: 'Raleway', sans-serif;
-
-    /*width: 800px;*/
-    background-color: black;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    text-decoration: none;
-
-    padding-left: 20px;
-    padding-right: 20px;
-    border-bottom: solid 1px white;
-    z-index: 4;
-
-
-    a {
-        background-color: transparent;
-        position: relative;
-        color: white;
+    .nav2 {
+   
+        position: sticky;
+        top: 0;
+    
+        
+        
+        font-family: 'Raleway', sans-serif;
+    
+        /*width: 800px;*/
+        background-color: black;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
         text-decoration: none;
-        margin-left: 10px;
-        margin-right: 10px;
-
-        transition: 1s padding ease-out, 1s margin ease-out, 1s border ease-out;
-
-        &:hover {
-            padding: 10px;
-            margin: -10px 5px;
-            border: 2px solid #ddd;
-
-
+    
+        padding: 0 2rem;
+        border-bottom: solid 1px white;
+        z-index: 4;
+    
+    
+        a {
+            background-color: transparent;
+            position: relative;
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
+    
+            transition: 1s padding ease-out, 1s margin ease-out, 1s border ease-out;
+    
+            &:hover {
+                padding: 10px;
+                margin: -10px 5px;
+                border: 2px solid #ddd;
+    
+    
+            }
+    
         }
-
+    
     }
+        
 
 }
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 400px) {
 
 
     .header2 {
-
         justify-content: space-between;
+        
+        div{
+            a {
+                .imagenHeader {
+                    width: 40px;
+                    height: 40px;
 
-        a {
-            .imagenHeader {
-                width: 40px;
-                height: 40px;
+                }
+            }
 
+            h1 {
+                display: none;
             }
         }
 
-        h1 {
+        
+
+
+        .botonNav {
+            display: inline-block;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding-right: 2rem;
+           
+
+            img {
+                  width: 40px;
+                   height: 30px;
+            }
+        }
+
+        .nav2{
+            position: absolute;
             display: none;
         }
 
 
-        .navOculto {
-            position: relative;
-            display: inline-block;
+
+        &:hover{
+            .nav2{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
 
 
-            .botonNav {
-                display: inline;
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                margin-right: 20px;
-
-                img {
-                    width: 40px;
-                    height: 30px;
-                }
+                position:absolute;
+                top: 4.5rem;
+                right: 0.2rem;
+                
+                min-height: 10rem;
+                width: 25rem;
             }
 
-            .navContenido {
+
+
+
+        }
+
+
+
+            /*.navContenido {
                 display: none;
                 position: absolute;
                 background-color: #f9f9f9;
@@ -161,17 +193,18 @@
                     display: block;
                     right: 40px;
                 }
-            }
+            }*/
+
+
+
         }
-    }
-
-
-    .nav2 {
-        display: none;
-    }
-
-
-
 }
+
+
+    
+
+
+
+
 
 

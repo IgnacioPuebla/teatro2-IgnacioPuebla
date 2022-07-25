@@ -10,9 +10,7 @@
 
     .tarjetaNoticia{
 
-        /*de prueba, despues lo saco*/
-        border: 1px solid green;
-        /*=========================*/
+        
 
         display: flex;
         justify-content: center;
@@ -27,13 +25,13 @@
 
         .containerNoticiaCentral{
             
-            border: 1px solid green;
+            
             width: 35rem;
             height: 20rem;
             padding-left: 3rem;
 
             .tarjetaNoticia__titulo{
-                border: 1px solid green;
+                
                 font-size: 3rem;
                 padding: 1rem;
 
@@ -42,7 +40,7 @@
 
 
             .tarjetaNoticia__texto{
-                border: 1px solid green;
+                
                 padding: 1rem;
             }
 
@@ -70,7 +68,7 @@
 
         .tarjetita{
 
-            border: 1px solid green;
+            
             margin: auto 1rem;
             width: 22rem;
             height: 25rem;
@@ -144,13 +142,12 @@
 
             .containerNoticiaCentral{
             
-                border: 1px solid green;
                 width: 22rem;
                 height: 22rem;
                 padding-left: 0;
     
                 .tarjetaNoticia__titulo{
-                    border: 1px solid green;
+                    
                     font-size: 1.5rem;
                     padding: 1rem;
     
@@ -159,7 +156,7 @@
     
     
                 .tarjetaNoticia__texto{
-                    border: 1px solid green;
+                    
                     padding: 1rem;
                 }
     
@@ -171,12 +168,7 @@
     
     
                 }
-    
-    
             }
-
-
-
         }
 
 
@@ -186,36 +178,33 @@
             flex-direction: column;
             
     
-            
     
             .tarjetita{
-    
-                border: 1px solid green;
                 margin: auto;
                 width: 22rem;
                 height: 25rem;
+
+                margin: auto;
                 
     
                 .tarjetita__imagen{
                     
                     height: 10rem;
     
-                    
                 }
-    
 
+                .tarjetita__textosContainer{
+
+                    .tarjetita__texto{
+                        margin: 1rem 0rem;
+                        padding: 1rem;
+    
+                    }
+                }
             }
-    
-    
-    
+
         }
-
-
-
-
-
     }
-
 
 }
 

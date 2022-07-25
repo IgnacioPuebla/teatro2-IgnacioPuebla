@@ -2,8 +2,8 @@
 
     display: grid;
     grid-template-areas: 
-        'header nav nav'
-        'main main main'
+        'header'
+        'main'
         ;
 
     grid-template-columns: 1fr;

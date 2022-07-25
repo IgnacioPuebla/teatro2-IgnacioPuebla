@@ -18,7 +18,7 @@
 
 .body_mio {
   display: grid;
-  grid-template-areas: 'header nav nav' 'main main main';
+  grid-template-areas: 'header' 'main';
   grid-template-columns: 1fr;
   grid-template-rows: auto auto; }
 
@@ -33,6 +33,7 @@
 .header2 {
   grid-area: header;
   display: flex;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   height: 80px;
@@ -44,125 +45,136 @@
   padding-top: 20px;
   border-bottom: solid 1px white;
   z-index: 4; }
-  .header2 a .imagenHeader {
-    width: 50px;
-    height: 50px;
-    transition: width height 1s; }
-    .header2 a .imagenHeader:hover {
-      width: 55px;
-      height: 55px; }
-  .header2 h1 {
-    padding: 5px; }
-  .header2 .navOculto .botonNav {
+  .header2 div {
+    display: flex; }
+    .header2 div a .imagenHeader {
+      width: 50px;
+      height: 50px;
+      transition: width height 1s; }
+      .header2 div a .imagenHeader:hover {
+        width: 55px;
+        height: 55px; }
+    .header2 div h1 {
+      padding: 5px; }
+  .header2 .botonNav {
     display: none; }
-  .header2 .navOculto .navContenido {
-    display: none; }
-
-.nav2 {
-  grid-area: nav;
-  position: sticky;
-  top: 0;
-  display: inline;
-  float: inline-end;
-  font-family: 'Raleway', sans-serif;
-  /*width: 800px;*/
-  background-color: black;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-bottom: solid 1px white;
-  z-index: 4; }
-  .nav2 a {
-    background-color: transparent;
-    position: relative;
-    color: white;
+  .header2 .nav2 {
+    position: sticky;
+    top: 0;
+    font-family: 'Raleway', sans-serif;
+    /*width: 800px;*/
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
-    transition: 1s padding ease-out, 1s margin ease-out, 1s border ease-out; }
-    .nav2 a:hover {
-      padding: 10px;
-      margin: -10px 5px;
-      border: 2px solid #ddd; }
+    padding: 0 2rem;
+    border-bottom: solid 1px white;
+    z-index: 4; }
+    .header2 .nav2 a {
+      background-color: transparent;
+      position: relative;
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition: 1s padding ease-out, 1s margin ease-out, 1s border ease-out; }
+      .header2 .nav2 a:hover {
+        padding: 10px;
+        margin: -10px 5px;
+        border: 2px solid #ddd; }
 
 @media screen and (max-width: 400px) {
   .header2 {
-    justify-content: space-between; }
-    .header2 a .imagenHeader {
+    justify-content: space-between;
+    /*.navContenido {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+
+                a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+
+                    &::hover {
+                        background-color: #f1f1f1
+                    }
+                }
+
+
+            }
+
+            &:hover {
+                .navContenido {
+                    display: block;
+                    right: 40px;
+                }
+            }*/ }
+    .header2 div a .imagenHeader {
       width: 40px;
       height: 40px; }
-    .header2 h1 {
+    .header2 div h1 {
       display: none; }
-    .header2 .navOculto {
-      position: relative;
-      display: inline-block; }
-      .header2 .navOculto .botonNav {
-        display: inline;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        margin-right: 20px; }
-        .header2 .navOculto .botonNav img {
-          width: 40px;
-          height: 30px; }
-      .header2 .navOculto .navContenido {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1; }
-        .header2 .navOculto .navContenido a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block; }
-          .header2 .navOculto .navContenido a::hover {
-            background-color: #f1f1f1; }
-      .header2 .navOculto:hover .navContenido {
-        display: block;
-        right: 40px; }
-  .nav2 {
-    display: none; } }
+    .header2 .botonNav {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding-right: 2rem; }
+      .header2 .botonNav img {
+        width: 40px;
+        height: 30px; }
+    .header2 .nav2 {
+      position: absolute;
+      display: none; }
+    .header2:hover .nav2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: absolute;
+      top: 4.5rem;
+      right: 0.2rem;
+      min-height: 10rem;
+      width: 25rem; } }
 
 .main2 {
   grid-area: main; }
   .main2 .fondoMain2 {
-    background-image: url(media/fondo_index.jpg);
+    background-image: url(https://res.cloudinary.com/nubenak2/image/upload/v1658701103/teatro/fondo_index_cph2xk.jpg);
+    background-size: cover;
     filter: grayscale(1);
     width: 100%;
-    height: 700px; }
+    height: 25rem; }
     .main2 .fondoMain2 .tituloMain2 {
       display: inline-block;
       color: white; }
-  .main2 .parrafito {
-    width: 100%;
-    height: 500px;
-    border: 1px solid black; }
   .main2 .actividadesMain {
     color: white;
     background-color: black;
     display: flex;
-    margin: 100px; }
+    margin: 6rem; }
     .main2 .actividadesMain .linkActividad {
       border: none;
-      height: 150px;
-      width: 150px;
+      height: 14rem;
+      width: 14rem;
       background-color: black; }
       .main2 .actividadesMain .linkActividad img {
-        height: 50px;
-        width: 50px; }
+        height: 4rem;
+        width: 4rem; }
     .main2 .actividadesMain .titulosActividad {
-      margin: 40px 40px 0px 40px; }
+      font-size: 3rem;
+      margin: 5rem 3rem 0rem 3rem; }
     .main2 .actividadesMain .textoActividad {
       height: fit-content;
       width: fit-content;
-      padding: 0px 40px 0px 40px;
-      margin: 40px 40px 0px 40px;
+      padding: 0rem 3rem 0rem 3rem;
+      margin: 5rem 3rem 0rem 3rem;
       border-left: 1px solid black; }
   .main2 .footer2 {
     display: flex;
@@ -171,40 +183,38 @@
     color: white; }
     .main2 .footer2 div {
       background-color: transparent;
+      display: flex;
+      flex-direction: column;
       text-align: center;
-      padding: 30px; }
+      padding: 2rem; }
       .main2 .footer2 div h4 {
-        font-size: 28px;
+        font-size: 2.8rem;
         letter-spacing: 6px; }
       .main2 .footer2 div a {
         color: white;
         text-decoration: none; }
 
 @media screen and (max-width: 400px) {
-  .main2 .fondoMain2 {
-    background-image: url(media/fondo_index.jpg);
-    background-size: cover;
-    filter: grayscale(1);
-    width: 400px;
-    height: 400px; }
-    .main2 .fondoMain2 .tituloMain2 {
-      display: inline-block;
-      font-size: 4rem;
-      color: white;
-      margin-top: 25%;
-      margin-left: 10px; }
+  .main2 .fondoMain2 .tituloMain2 {
+    display: inline-block;
+    font-size: 4rem;
+    color: white;
+    margin-top: 25%;
+    margin-left: 10px; }
   .main2 .actividadesMain {
     margin: 1rem; }
     .main2 .actividadesMain .linkActividad {
-      height: 150px;
-      width: 150px; }
+      height: 4rem;
+      width: 4rem; }
       .main2 .actividadesMain .linkActividad img {
-        height: 3rem;
-        width: 3rem; }
+        height: 1.5rem;
+        width: 1.5rem; }
     .main2 .actividadesMain .titulosActividad {
-      margin: 40px 40px 0px 40px; }
+      font-size: 2.5rem;
+      margin: 0.5rem 0rem 0rem 1rem; }
     .main2 .actividadesMain .textoActividad {
-      display: none; }
+      display: none;
+      position: absolute; }
   .main2 .footer2 {
     flex-direction: column;
     justify-content: space-around;
@@ -280,6 +290,8 @@
           padding: 1rem; }
 
 @media screen and (max-width: 400px) {
+  .main2 .tituloPlays {
+    margin-left: 1rem; }
   .main2 .grid_plays {
     display: grid;
     grid-template-areas: "obra1" "obra2" "obra3" "obra4" "obra5" "obra6" "obra7";
@@ -292,7 +304,7 @@
     .main2 .grid_plays div .textoObras {
       height: 8rem; }
       .main2 .grid_plays div .textoObras h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding-top: 2rem;
         padding-left: 2rem; }
     .main2 .grid_plays div .containerObra .contenidoObra .botonSecundario {
@@ -310,9 +322,6 @@
   margin-bottom: 2rem; }
 
 .main2 .tarjetaNoticia {
-  /*de prueba, despues lo saco*/
-  border: 1px solid green;
-  /*=========================*/
   display: flex;
   justify-content: center;
   padding: auto; }
@@ -320,16 +329,13 @@
     width: 35rem;
     height: 20rem; }
   .main2 .tarjetaNoticia .containerNoticiaCentral {
-    border: 1px solid green;
     width: 35rem;
     height: 20rem;
     padding-left: 3rem; }
     .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__titulo {
-      border: 1px solid green;
       font-size: 3rem;
       padding: 1rem; }
     .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__texto {
-      border: 1px solid green;
       padding: 1rem; }
     .main2 .tarjetaNoticia .containerNoticiaCentral .botonTarjeta {
       border: none;
@@ -345,7 +351,6 @@
   justify-content: center;
   margin: 4rem auto; }
   .main2 .containerTarjetitas .tarjetita {
-    border: 1px solid green;
     margin: auto 1rem;
     width: 22rem;
     height: 25rem; }
@@ -373,16 +378,13 @@
       width: 100%;
       height: 16rem; }
     .main2 .tarjetaNoticia .containerNoticiaCentral {
-      border: 1px solid green;
       width: 22rem;
       height: 22rem;
       padding-left: 0; }
       .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__titulo {
-        border: 1px solid green;
         font-size: 1.5rem;
         padding: 1rem; }
       .main2 .tarjetaNoticia .containerNoticiaCentral .tarjetaNoticia__texto {
-        border: 1px solid green;
         padding: 1rem; }
       .main2 .tarjetaNoticia .containerNoticiaCentral .botonTarjeta {
         border: none;
@@ -396,12 +398,15 @@
     display: flex;
     flex-direction: column; }
     .main2 .containerTarjetitas .tarjetita {
-      border: 1px solid green;
       margin: auto;
       width: 22rem;
-      height: 25rem; }
+      height: 25rem;
+      margin: auto; }
       .main2 .containerTarjetitas .tarjetita .tarjetita__imagen {
-        height: 10rem; } }
+        height: 10rem; }
+      .main2 .containerTarjetitas .tarjetita .tarjetita__textosContainer .tarjetita__texto {
+        margin: 1rem 0rem;
+        padding: 1rem; } }
 
 .main2 .fotoUs {
   display: block;
@@ -426,41 +431,39 @@
   font-size: 2rem;
   margin-left: 8rem; }
 
-.main2 .formContacto {
-  border: 1px solid green; }
-  .main2 .formContacto .campos {
-    border: 1px solid red;
-    margin: 2rem auto auto auto;
-    display: grid;
-    width: 50rem;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto; }
-    .main2 .formContacto .campos .campGral {
-      min-height: 3rem;
-      padding-left: 1.5rem; }
-    .main2 .formContacto .campos .camp1 {
-      grid-column: 1/2;
-      grid-row: 1/2; }
-    .main2 .formContacto .campos .camp2 {
-      grid-column: 2/3;
-      grid-row: 1/2; }
-    .main2 .formContacto .campos .camp3 {
-      grid-column: 1/2;
-      grid-row: 2/3; }
-    .main2 .formContacto .campos .camp4 {
-      grid-column: 2/3;
-      grid-row: 2/3; }
-    .main2 .formContacto .campos .camp5 {
-      grid-column: 1/3;
-      grid-row: 3/4;
-      padding-left: 1.5rem;
-      padding-top: 1rem;
-      resize: none; }
-  .main2 .formContacto .botonCampos {
-    display: block;
-    margin: 2rem auto;
-    height: 2.5rem;
-    width: 10rem; }
+.main2 .formContacto .campos {
+  margin: 2rem auto auto auto;
+  display: grid;
+  width: 50rem;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto; }
+  .main2 .formContacto .campos .campGral {
+    min-height: 3rem;
+    padding-left: 1.5rem; }
+  .main2 .formContacto .campos .camp1 {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+  .main2 .formContacto .campos .camp2 {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+  .main2 .formContacto .campos .camp3 {
+    grid-column: 1/2;
+    grid-row: 2/3; }
+  .main2 .formContacto .campos .camp4 {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+  .main2 .formContacto .campos .camp5 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    resize: none; }
+
+.main2 .formContacto .botonCampos {
+  display: block;
+  margin: 2rem auto;
+  height: 2.5rem;
+  width: 10rem; }
 
 .main2 .actividadesContacto {
   color: black;
